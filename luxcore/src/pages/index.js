@@ -1,18 +1,15 @@
-// pages/index.js
-import { Box, Container } from '@chakra-ui/react';
+import React from 'react';
+import { ChakraProvider } from '@chakra-ui/react';
 import Header from '../components/Header';
+import HomePage from './Homepage';
 
-const Home = () => {
-  return (
-    <Box>
+function Index() {
+ return (
+    <ChakraProvider>
       <Header />
-      <Container mt={8}>
-        <Box>
-          <p>Welcome to Luxcore Steakhouse!</p>
-        </Box>
-      </Container>
-    </Box>
-  );
-};
+      <HomePage />
+    </ChakraProvider>
+ );
+}
 
-export default Home;
+export default Index;
