@@ -2,8 +2,10 @@ export default function Hero() {
     return(
         <main>
         <section class="banner">
+            <section class="calltoaction">
             <h1>Welcome to LuxCore Steakhouse</h1>
             <p>Where culinary craftsmanship meets timeless elegance.</p>
+            </section>
         </section>
         <section class="steak">
             <h2>World Class Steak</h2>

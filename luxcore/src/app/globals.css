@@ -19,72 +19,140 @@
 body {
   color: rgb(var(--foreground-rgb));
   background: #FFF6EC;
-}
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background-color: #f4f4f4;
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
+ }
+ 
+ 
+ header {
+    
+  color: black;
+  font-family: 'Outfit', sans-serif;
+  background-color: #331B1B;
 }
 
-.logo {
-  max-width: 200px;
-}
-
-nav ul {
-  float: right;
-  list-style: none;
-  padding: 0;
-}
-
-nav ul li {
-  float: inline-end;
-  margin-right: 10px;
-}
-
-nav ul li a {
-  float: right;
-  text-decoration: none;
-  color: #333;
-}
-
-.logo {
-  max-width: 200px;
+.container {
+  width: 90%;
   margin: 0 auto;
 }
 
-.banner {
+.navbar {
+  position:relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  transition: top 0.3s;
+}
+
+.navbar-brand {
+  position: relative;
+  transform: translateX(-50%);
+  display: flex;
+  left: 5%;
+  align-items: center;
+  font-size: 120%; 
+  color: #333 !important; 
+  font-family: 'Orkney', sans-serif;
+  
+}
+
+.navbar-brand a {
+  text-decoration: none;
+  color: white;
+}
+
+.navbar-brand a:hover {
+  color: lightgray;
+}
+
+.navbar-toggle {
+  display: none;
+}
+
+.navbar-toggler {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.navbar-toggler span {
+  height: 3px;
+  width: 25px;
+ 
+  margin: 4px;
+  transition: 0.4s;
+}
+
+.navbar-collapse {
+  display: flex;
+}
+
+.navbar-nav {
+  display: flex;
+  list-style: none;
+}
+
+.navbar-nav li {
+  margin: 0 15px;
+}
+
+.navbar-nav a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+  
+}
+
+.navbar-nav a:hover {
+  color: lightgray;
+}
+
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+ 
+ .banner {
   background-image: url('images/restaurant.png');
   background-size: cover;
   background-position: center;
-  height: 400px;
+  height: 550px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   color: #fff;
+  opacity: 70%;
+ }
+ 
+ .calltoaction {
+  height: 150px;
+  width: 1000px;
+  background: rgba(98, 54, 54, 0.75);
+ }
+
+.calltoaction h1 {
+  margin-bottom: 10px;
+  font-size: large;
+  color: white;
 }
 
-.steak, .wine {
+ .steak, .wine {
   padding: 40px;
-}
-
-.wine {
-  background-color: #f4f4f4;
-}
-
-h1, h2 {
+ }
+ 
+ .wine {
+  background-color: #FFF6EC;
+ }
+ 
+ h1, h2 {
   color: #333;
-}
-
-footer {
+ }
+ 
+ footer {
   padding: 20px;
   text-align: center;
-}
+ }
