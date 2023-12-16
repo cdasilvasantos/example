@@ -7,7 +7,6 @@ export default function Hero() {
             <p>Where culinary craftsmanship meets timeless elegance.</p>
             <p>Join our members club for exclusive offers.</p>
             <section class="button-container">
-                <a href="about.html" class="button-left">Reserve</a>
                 <a href="#project-section" class="button-right">Join our Members Club</a>
             </section>
             </section>
