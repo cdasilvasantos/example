@@ -130,14 +130,20 @@ body {
  
  .calltoaction {
   height: 150px;
-  width: 1000px;
+  width: 1300px;
+  border-radius: 20px;
   background: rgba(98, 54, 54, 0.75);
  }
 
 .calltoaction h1 {
   margin-bottom: 10px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
   font-size: large;
   color: white;
+}
+
+.calltoaction p {
+  margin-top: 10px;
 }
 
  .steak, .wine {
