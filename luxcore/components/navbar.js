@@ -17,7 +17,7 @@ export default function Navbar() {
                     <ul class="navbar-nav">
                         <li><a href="about.html">Menu</a></li>
                         <li><a href="#project-section">About</a></li>
-                        <li><a href="#section6">Reservations</a></li>
+                        <li><a href="#section6">Members Club</a></li>
                     </ul>
                 </nav>
             </div>

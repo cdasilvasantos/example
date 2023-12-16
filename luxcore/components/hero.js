@@ -3,11 +3,10 @@ export default function Hero() {
         <main>
         <section class="banner">
             <section class="calltoaction">
-            <h1>Welcome to LuxCore Steakhouse</h1>
-            <p>Where culinary craftsmanship meets timeless elegance.</p>
+            <h1>Where culinary craftsmanship meetes timeless elegance</h1>
             <p>Join our members club for exclusive offers.</p>
             <section class="button-container">
-                <a href="#project-section" class="button-right">Join our Members Club</a>
+                <a href="#project-section" class="button-right">Members Club</a>
             </section>
             </section>
         </section>
