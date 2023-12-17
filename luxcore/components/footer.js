@@ -7,8 +7,8 @@ export default function Footer() {
             <h3>123 Warren Street, Newark, NJ | 123-456-7890</h3>
             <button className="btn about1">About Us</button>
             <button className="btn menu">Menu</button>
-            <button className="btn contact">Contact Us</button>
-            <button className="btn members2">Members Club</button>
+            <button className="btn contact">Join elite, Join C&M</button>
+            
 
             <div id="mc_embed_signup">
                 <form action="https://njit.us14.list-manage.com/subscribe/post?u=2357bfed3c1d60b4f25ca0e87&amp;id=81eee0a60a&amp;f_id=00b277e0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank">
