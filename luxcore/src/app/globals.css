@@ -115,6 +115,7 @@ body {
  
  .banner {
   background-image: url('images/restaurant.png');
+  border-radius: 0px 0px 15px 15px;
   background-size: cover;
   background-position: center;
   height: 550px;
@@ -167,6 +168,90 @@ body {
   font-style: normal;
   font-weight: 700;
 }
+
+.project-cards {
+  display: flex;
+  align-items: center;
+  width: 1200px;
+  margin-top: 121px;
+  justify-content:space-evenly;
+}
+
+.project1 {
+  text-align: center;
+  border-radius: 20px;
+  background: #331B1B;
+  width: 1000px;
+  height: 570px;
+}
+
+.project1 .section-top {
+  color: white;
+  text-transform: uppercase;
+  margin-top: 40px;
+}
+
+.btn {
+  border: 2px solid black;
+  border-radius: 20px;
+  background-color: #331B1B;
+  color: black;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+.about {
+  border-color: white;
+  color: white;
+  margin-right: 100px;
+}
+
+.about:hover {
+  background-color: gray;
+  color: white;
+}
+
+.members {
+  border-color: white;
+  color: white;
+}
+
+.members:hover {
+  background: gray;
+  color: white;
+}
+
+.project1 h2 {
+  color: white;
+  font-family: Ruluko;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 50px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.project1 .about-text {
+  color: #F8F8F8;
+  text-align: center;
+  font-family: Ruluko;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 200;
+  width: 900px;
+  margin-top: 100px;
+  margin-left: 30px;  
+  flex-shrink: 0;
+}
+
+/* gallery */
+
+
 
  .steak, .wine {
   padding: 40px;
