@@ -114,7 +114,7 @@ body {
 }
  
  .banner {
-  background-image: url('images/restaurant.png');
+  background-image: url('../../public/images/restaurant.png');
   border-radius: 0px 0px 15px 15px;
   background-size: cover;
   background-position: center;
@@ -124,13 +124,13 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: #fff;
+  color: #180d0d;
   opacity: 90%;
  }
  
  .calltoaction {
   height: 150px;
-  width: 1300px;
+  width: 1203px;
   border-radius: 20px;
   background: rgba(98, 54, 54, 0.70);
  }
@@ -332,3 +332,44 @@ body {
 footer p {
   margin-top: 30px;
 }
+
+.discover h1 {
+  font-size: 40px;
+  text-align: center;
+  margin-top: 90px;
+  color: #331B1B;
+}
+
+.steak-image {
+  margin-left: 250px;
+  display: flex;
+}
+
+
+.steak {
+    color: #000;
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    display: inline;
+    text-transform: capitalize;
+
+}
+.steak h2 {
+    font-size: 25px;
+    max-width: 370px;
+    margin: 32px;
+}
+
+.steak p{
+    font-size: 15px;
+    max-width: 320px;
+    margin-bottom: 70px;
+}
+
+.steak p {
+    flex: 1;
+}
+
