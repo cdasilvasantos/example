@@ -5,9 +5,7 @@ export default function Hero() {
             <section class="calltoaction">
             <h1>Where culinary craftsmanship meetes timeless elegance</h1>
             <p>Join our members club for exclusive offers.</p>
-            <section class="button-container">
-                <a href="#project-section" class="button-right">Members Club</a>
-            </section>
+            <button class="btn about1"> C&M Members Club</button>
             </section>
         </section>
     </main>
