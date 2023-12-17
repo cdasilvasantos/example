@@ -267,5 +267,68 @@ body {
  
  footer {
   padding: 20px;
+  background-color: #331B1B;
+  color: white;
   text-align: center;
  }
+
+ footer h1 {
+  font-size: 50px;
+  color: white;
+  text-align: center;
+ }
+
+ footer h3 {
+  text-align: center;
+ }
+
+ .about1 {
+  border-color: white;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.about1:hover {
+  background-color: gray;
+  color: white;
+}
+
+.menu {
+  border-color: white;
+  color: white;
+  margin-left: 100px;
+  margin-right: 10px;
+}
+
+.menu:hover {
+  background-color: gray;
+  color: white;
+}
+
+.contact {
+  border-color: white;
+  color: white;
+  margin-left: 100px;
+  margin-right: 10px;
+}
+
+.contact:hover {
+  background-color: gray;
+  color: white;
+}
+
+.members2 {
+  border-color: white;
+  color: white;
+  margin-left: 100px;
+  margin-right: 10px;
+}
+
+.members2:hover {
+  background: gray;
+  color: white;
+}
+
+footer p {
+  margin-top: 30px;
+}
