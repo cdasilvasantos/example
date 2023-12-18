@@ -48,7 +48,7 @@ body {
   font-family: 'Ruluko', sans-serif;
 }
 
-.navbar-brand {
+.logo {
   position: relative;
   transform: translateX(-50%);
   display: flex;
@@ -59,12 +59,12 @@ body {
   font-family: 'Ephesis', cursive;  
 }
 
-.navbar-brand a {
+.logo a {
   text-decoration: none;
   color: white;
 }
 
-.navbar-brand a:hover {
+.logo a:hover {
   color: lightgray;
 }
 

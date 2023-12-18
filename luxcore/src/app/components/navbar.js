@@ -3,7 +3,7 @@ export default function Navbar() {
         <header>
         <div class="container">
             <div class="navbar">
-                <div class="navbar-brand">
+                <div class="logo">
                     <a href="#section0">LuxCore</a>
                 </div>
                 <div class="navbar-toggler" onclick="toggleNavbar()">

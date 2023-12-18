@@ -1,65 +1,79 @@
-// @ts-check
 const { test, expect } = require('@playwright/test');
 
-test('navbar rendering and toggle', async ({ page }) => {
-  // Navigate to a sample page containing the Navbar component.
-  await page.goto('http://localhost:3000');
+const websiteURL = 'http://localhost:3000';
 
-  // Ensure the Navbar is rendered.
-  const navbar = await page.waitForSelector('header');
-  // @ts-ignore
-  await expect(navbar).toBeVisible();
+// Expected constants
+const expectedTitle = 'Luxcore';
+const expectedLogoText = 'LuxCore';
+const expectedHeroTitle = 'Where culinary craftsmanship meets timeless elegance';
+const expectedHeroSubText = 'Join our members club for exclusive offers.';
+const expectedHeroLinkCount = 1;
+const expectedAboutTitle = 'At LuxCore Steakhouse , we  strive to craft an exquisite haven where you and your cherished companions indulge in moments of serenity. With unwavering dedication, we curate an ambiance where each visit becomes a plate of memories, and our culinary artistry, an unparalleled testament to excellence. Welcome to a sanctuary of fine dining, where every dish is a masterpiece and every experience is etched in the elegance of shared stories.';
+const expectedMetaDescription = 'Luxury steakhouse at its core';
+const expectedNavs = ['Menu', 'About', 'Club'];
 
-  // Check if the initial state of the navigation menu is hidden.
-  const navMenu = await page.waitForSelector('.navbar-collapse');
-  // @ts-ignore
-  await expect(navMenu).not.toBeVisible();
 
-  // Click on the navbar toggler to open the navigation menu.
-  await page.click('.navbar-toggler');
-  await page.waitForTimeout(500); // Add a small delay to allow the animation to complete.
-
-  // Check if the navigation menu is now visible after clicking the toggler.
-  // @ts-ignore
-  await expect(navMenu).toBeVisible();
-
-  // Click on the navbar toggler again to close the navigation menu.
-  await page.click('.navbar-toggler');
-  await page.waitForTimeout(500); // Add a small delay to allow the animation to complete.
-
-  // Check if the navigation menu is hidden after clicking the toggler again.
-  // @ts-ignore
-  await expect(navMenu).not.toBeVisible();
+test.beforeEach(async ({ page }) => {
+  await page.goto(websiteURL);
 });
 
-test('navbar links', async ({ page }) => {
-  // Navigate to a sample page containing the Navbar component.
-  await page.goto('http://localhost:3000');
-
-  // Click on the "Menu" link in the navbar.
-  await page.click('nav.navbar-collapse a[href=""]');
-
-  // Verify that the expected content for the "Menu" page is visible.
-  // @ts-ignore
-  await expect(page).toMatch('Menu Page Content');
-
-  // Navigate back to the original page.
-  await page.goBack();
-
-  // Click on the "About" link in the navbar.
-  await page.click('nav.navbar-collapse a[href=""]');
-
-  // Verify that the expected content for the "About" page is visible.
-  // @ts-ignore
-  await expect(page).toMatch('About Page Content');
-
-  // Navigate back to the original page.
-  await page.goBack();
-
-  // Click on the "Club" link in the navbar.
-  await page.click('nav.navbar-collapse a[href=""]');
-
-  // Verify that the expected content for the "Club" page is visible.
-  // @ts-ignore
-  await expect(page).toMatch('Club Page Content');
+test('Check Page Title', async ({ page }) => {
+  const title = await page.title();
+  expect(title).toBe(expectedTitle);
 });
+
+test('Check Logo in Header', async ({ page }) => {
+  const logoText = await page.locator('.logo').textContent();
+  expect(logoText).toBe(expectedLogoText);
+});
+
+
+test('Check Hero Section', async ({ page }) => {
+  expect(await page.locator('.calltoaction h1').textContent()).toBe(expectedHeroTitle);
+  expect(await page.locator('.calltoaction p').textContent()).toBe(expectedHeroSubText);
+});
+
+test('Check Links in Hero Section', async ({ page }) => {
+  const linkCount = await page.locator('.calltoaction .btn').count();
+  expect(linkCount).toBe(expectedHeroLinkCount);
+});
+
+
+
+test('Check About Section', async ({ page }) => {
+  expect(await page.locator('.about-text').textContent()).toBe(expectedAboutTitle);
+});
+
+
+
+test('Check SEO Meta Description', async ({ page }) => {
+  const metaDescription = await page.getAttribute('meta[name="description"]', 'content');
+  expect(metaDescription).toBe(expectedMetaDescription);
+});
+
+
+
+test('Check All Navigation Links', async ({ page }) => {
+  const navLinks = await page.locator('.menu-item');
+  const count = await navLinks.count();
+
+  for (let i = 0; i < count; i++) {
+    const link = navLinks.nth(i);
+    expect(await link.isVisible()).toBe(true);
+  }
+});
+
+
+
+test('Check All Footer Links', async ({ page }) => {
+  const footerLinks = await page.locator('.footer-link');
+  const count = await footerLinks.count();
+
+  for (let i = 0; i < count; i++) {
+    const link = footerLinks.nth(i);
+    expect(await link.isVisible()).toBe(true);
+  }
+});
+
+
+
