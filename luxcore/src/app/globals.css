@@ -511,7 +511,7 @@ footer p {
 
 .art {
   color: rgb(var(--foreground-rgb));
-  color: #d2b48c; /* Warm tone text color */
+  
   font-family: 'Ruluko', sans-serif;
   text-align: center;
   padding: 50px;
@@ -537,41 +537,88 @@ footer p {
 /* Testimonial cards styling */
 .testimonial-section {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px; /* adds space between cards */
   margin-top: 40px;
-  padding: 0 20px;
 }
 
 .testimonial-card {
   background-color: #331B1B;
-  color: #fff; /* White text color */
-  padding: 20px;
-  border-radius: 8px; /* Slight rounding of corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-  width: 30%; /* Each card takes up 30% of the container width */
-  margin: 0 10px; /* Spacing between cards */
+  color: #fff; /* Dark text for contrast */
+  padding: 30px;
+  border-radius: 16px; /* Rounded corners for a modern look */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  max-width: 340px; /* Maximum width of cards */
+  width: 100%; /* Makes it responsive */
   box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for hover effects */
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px); /* Slightly raise the card on hover */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15); /* Increase shadow on hover */
 }
 
 .testimonial-quote {
   font-style: italic;
-  margin-bottom: 15px; 
+  margin-bottom: 15px; /* Spacing between quote and author */
+  font-size: 1rem; /* Adjust font size as necessary */
 }
 
 .testimonial-author {
-  font-weight: bold;
+  font-weight: 600; /* Bold for the author name */
   text-align: right;
+  margin-top: 20px; /* Space above the author's name */
+  font-size: 0.85rem; /* Smaller font size for the author's title */
+  color: #fff; /* Slightly lighter color for the author's title */
 }
 
 /* Responsive design for smaller screens */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .testimonial-section {
       flex-direction: column;
       align-items: center;
   }
 
   .testimonial-card {
-      width: 80%; 
-      margin-bottom: 20px; 
+      width: 80%; /* Adjust width on smaller screens */
   }
 }
+
+/* Testimonial header styling */
+.testimonial-header {
+  text-align: center;
+  margin-bottom: 20px;
+  
+}
+
+.testimonial-header h2 {
+  font-size: 2.25rem; /* Larger font size for the header */
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.testimonial-header p {
+  font-size: 1rem; /* Adjust the font size as necessary */
+  margin-bottom: 20px;
+   color: #331B1B; ;
+}
+
+.join-club-btn {
+  background-color: #331B1B;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.join-club-btn:hover {
+  background-color: #331B1B;
+}
+
+

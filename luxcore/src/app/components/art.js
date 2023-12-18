@@ -20,6 +20,11 @@ export default function Art() {
                     />
                 </div>
             </section>
+            <section className="testimonial-header">
+                <h2>Discover Why Our Guests Love Luxcore</h2>
+                <p>Join the C&M Members Club and be part of an exclusive experience that's revered by culinary connoisseurs and high-profile personalities alike.</p>
+                <button className="btn join-club-btn">Join the Members Club</button>
+            </section>
 
             {/* Testimonial cards */}
             <section className="testimonial-section">
