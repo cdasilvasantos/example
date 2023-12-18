@@ -508,3 +508,30 @@ footer p {
 .indicates-required {
   color: black;
 }
+
+
+.art {
+  color: rgb(var(--foreground-rgb));
+  color: #d2b48c; /* Warm tone text color */
+  font-family: 'Ruluko', sans-serif;
+  text-align: center;
+  padding: 50px;
+}
+
+.art-heading {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 0;
+}
+
+.art-images-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.art-image-wrapper {
+  overflow: hidden; /* Clip the images to their container */
+}
+
