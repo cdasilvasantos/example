@@ -1,5 +1,7 @@
+import React from 'react';
+
 export default function Hero() {
-    return(
+    return (
         <main>
         <section class="banner">
             <section class="calltoaction">
