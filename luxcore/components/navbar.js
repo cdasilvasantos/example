@@ -4,7 +4,7 @@ export default function Navbar() {
         <div class="container">
             <div class="navbar">
                 <div class="navbar-brand">
-                    <a href="#section0">Luxcore</a>
+                    <a href="#section0">LuxCore</a>
                 </div>
                 <div class="navbar-toggler" onclick="toggleNavbar()">
                     <div class="hamburger">
@@ -15,9 +15,9 @@ export default function Navbar() {
                 </div>
                 <nav class="navbar-collapse">
                     <ul class="navbar-nav">
-                        <li><a href="about.html">Menu</a></li>
-                        <li><a href="#project-section">About</a></li>
-                        <li><a href="#section6">Members Club</a></li>
+                        <li><a href="">Menu</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Club</a></li>
                     </ul>
                 </nav>
             </div>

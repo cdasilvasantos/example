@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&family=Ephesis&family=Ruluko&family=Rye&display=swap');
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -44,6 +45,7 @@ body {
   align-items: center;
   padding: 20px 0;
   transition: top 0.3s;
+  font-family: 'Ruluko', sans-serif;
 }
 
 .navbar-brand {
@@ -52,10 +54,9 @@ body {
   display: flex;
   left: 5%;
   align-items: center;
-  font-size: 120%; 
+  font-size: 40px; 
   color: #333 !important; 
-  font-family: 'Orkney', sans-serif;
-  
+  font-family: 'Ephesis', cursive;  
 }
 
 .navbar-brand a {
@@ -80,29 +81,38 @@ body {
 .navbar-toggler span {
   height: 3px;
   width: 25px;
- 
   margin: 4px;
   transition: 0.4s;
 }
 
 .navbar-collapse {
   display: flex;
+  font-family: 'Ruluko', sans-serif;
+  font-weight: 100px;
 }
 
 .navbar-nav {
   display: flex;
   list-style: none;
+  font-family: 'Ruluko', sans-serif;
+  font-weight: 100px;
 }
 
 .navbar-nav li {
   margin: 0 15px;
+  font-family: 'Ruluko', sans-serif;
+  font-weight: 1000%;
+
 }
 
 .navbar-nav a {
   text-decoration: none;
   color: white;
   transition: color 0.3s;
-  
+  font-family: 'Crimson Text', serif;
+  font-weight: 1000px;
+  text-transform: uppercase;
+  word-spacing: 10px;
 }
 
 .navbar-nav a:hover {
@@ -137,20 +147,15 @@ body {
 
 .calltoaction h1 {
   margin-bottom: 10px;
-  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-family: "Ephesis", cursive;
   font-size: 30px;
   color: white;
 }
 
 .calltoaction p {
-  font-family:Georgia, 'Times New Roman', Times, serif;
-  margin-top: 10px;
+  font-family: "Ephesis", serif;
+  margin-top: 15px;
   color: white;
-}
-
-.calltoaction .button-container {
-  font-family:Georgia, 'Times New Roman', Times, serif;
-  margin-top: 10px;
 }
 
 .button-right {
@@ -201,6 +206,8 @@ body {
   font-size: 16px;
   cursor: pointer;
   margin-top: 30px;
+  text-transform: uppercase;
+  font-family: "Ruluku", sans-serif;
 }
 
 .about {
@@ -226,7 +233,7 @@ body {
 
 .project1 h2 {
   color: white;
-  font-family: Ruluko;
+  font-family: 'Ephesis', serif;
   font-size: 50px;
   font-style: normal;
   font-weight: 600;
@@ -240,8 +247,8 @@ body {
 .project1 .about-text {
   color: #F8F8F8;
   text-align: center;
-  font-family: Ruluko;
-  font-size: 18px;
+  font-family: 'Crimson Text', serif;
+  font-size: 20px;
   font-style: normal;
   font-weight: 200;
   width: 900px;
@@ -277,10 +284,12 @@ body {
   font-size: 50px;
   color: white;
   text-align: center;
+  font-family: 'Ephesis', cursive;
  }
 
  footer h3 {
   text-align: center;
+  font-family: 'Ruluku', serif;
  }
 
  .about1 {
@@ -335,10 +344,12 @@ footer p {
 }
 
 .discover h1 {
-  font-size: 40px;
+  font-size: 60px;
+  font-weight: 80px;
   text-align: center;
   margin-top: 90px;
-  color: #331B1B;
+  color: #6F1C11;
+  font-family: 'Rye', cursive;
 }
 
 .steak-image {
@@ -358,15 +369,17 @@ footer p {
   max-width: 100%;
   max-height: 100%;
   margin-top: 80px;
-  font-size: 25px;
+  font-size: 30px;
   text-align: center;
   margin-left: 500px;
   margin-bottom: -60px;
+  font-family: 'Rye', cursive;
 }
 .steak p{
-    font-size: 15px;
+    font-size: 20px;
     margin-bottom: 70px;
     float: right;
+    font-family: 'Crimson Text', serif;
 }
 .steak p {
     flex: 1;
@@ -388,16 +401,18 @@ footer p {
   max-width: 100%;
   max-height: 100%;
   margin-top: 80px;
-  font-size: 25px;
+  font-size: 30px;
   text-align: center;
   margin-right: 600px;
   margin-bottom: -40px;
+  font-family: 'Rye', cursive;
 }
 .wine p{
     margin-left: 80px;
-    font-size: 15px;
+    font-size: 20px;
     margin-bottom: 70px;
     float: left;
+    font-family: 'Crimson Text', serif;
 }
 .wine p {
     flex: 1;
@@ -433,12 +448,13 @@ footer p {
 
 /* Mailchimp Form Styles */
 #mc_embed_signup {
-  background-color: #fff;
+  background-color: rgb(255, 255, 255);
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   margin: 20px auto;
   max-width: 600px;
+  font-family: 'Crimson Text', serif;
 }
 
 #mc_embed_signup h2 {
