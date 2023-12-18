@@ -14,7 +14,7 @@ export default function Footer() {
                 <form action="https://njit.us14.list-manage.com/subscribe/post?u=2357bfed3c1d60b4f25ca0e87&amp;id=81eee0a60a&amp;f_id=00b277e0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank">
                     <div id="mc_embed_signup_scroll">
                         <h2>Join C&M Members Club</h2>
-                        <div className="indicates-required"><span className="asterisk">*</span> indicates required</div>
+                        <div className="indicates-required"><span className="asterisk">*</span> Required</div>
                         <div className="mc-field-group">
                             <label htmlFor="mce-EMAIL">Email Address <span className="asterisk">*</span></label>
                             <input type="email" name="EMAIL" className="required email" id="mce-EMAIL" required />

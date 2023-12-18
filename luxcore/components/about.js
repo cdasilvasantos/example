@@ -5,7 +5,7 @@ export default function About() {
         <main>
                 <div class="project-cards">
                     <div class="project1">
-                        <p class="section-top">The bright new experience in the heart of newark, new jersey</p>
+                        <p class="section-top1">The bright new experience in the heart of newark, new jersey</p>
                         <h2>Luxcore Steakhouse</h2>
                         <button class="btn about">About Us</button>
                         <button class="btn members">Members Club</button>

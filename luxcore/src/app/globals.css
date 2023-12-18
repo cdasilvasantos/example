@@ -118,7 +118,7 @@ body {
   border-radius: 0px 0px 15px 15px;
   background-size: cover;
   background-position: center;
-  height: 550px;
+  height: 850px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -129,10 +129,10 @@ body {
  }
  
  .calltoaction {
-  height: 150px;
+  height: 200px;
   width: 1203px;
   border-radius: 20px;
-  background: rgba(98, 54, 54, 0.70);
+  background: rgba(98, 54, 54, 0.77);
  }
 
 .calltoaction h1 {
@@ -145,6 +145,7 @@ body {
 .calltoaction p {
   font-family:Georgia, 'Times New Roman', Times, serif;
   margin-top: 10px;
+  color: white;
 }
 
 .calltoaction .button-container {
@@ -163,7 +164,7 @@ body {
   align-items: center;
   justify-content: center;
   color: #FFFCFC;
-  font-family: 'Outfit', sans-serif;
+  font-family:Georgia, 'Times New Roman', Times, serif;
   font-size: 110%;
   font-style: normal;
   font-weight: 700;
@@ -185,7 +186,7 @@ body {
   height: 570px;
 }
 
-.project1 .section-top {
+.project1 .section-top1 {
   color: white;
   text-transform: uppercase;
   margin-top: 40px;
@@ -341,38 +342,66 @@ footer p {
 }
 
 .steak-image {
-  margin-left: 250px;
-  display: flex;
+  max-width: 100%;
+  max-height: 100%;
+  margin-left: 50px;
 }
-
 
 .steak {
-    color: #000;
-    font-family: "Inter", sans-serif;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    display: inline;
-    text-transform: capitalize;
-
-}
-.steak h2 {
-    font-size: 25px;
-    max-width: 370px;
-    margin: 32px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 10fr 10fr 1fr;
+    column-gap: 50px;
 }
 
+.steak-section-top {
+  max-width: 100%;
+  max-height: 100%;
+  margin-top: 80px;
+  font-size: 25px;
+  text-align: center;
+  margin-left: 500px;
+  margin-bottom: -60px;
+}
 .steak p{
     font-size: 15px;
-    max-width: 320px;
     margin-bottom: 70px;
+    float: right;
 }
-
 .steak p {
     flex: 1;
 }
 
+.wine-image {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.wine {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 15fr 10fr 1fr;
+    column-gap: 50px;
+}
+
+.wine-section-top {
+  max-width: 100%;
+  max-height: 100%;
+  margin-top: 80px;
+  font-size: 25px;
+  text-align: center;
+  margin-right: 600px;
+  margin-bottom: -40px;
+}
+.wine p{
+    margin-left: 80px;
+    font-size: 15px;
+    margin-bottom: 70px;
+    float: left;
+}
+.wine p {
+    flex: 1;
+}
 /* Footer Styles */
 footer {
   color: rgb(var(--foreground-rgb));

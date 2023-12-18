@@ -1,5 +1,6 @@
 import Image from "next/image"
 import steak from "../public/images/steak.png"
+import wine from "../public/images/wine.png"
 
 export default function Menu() {
     return(
@@ -7,9 +8,8 @@ export default function Menu() {
         <section class="discover">
             <h1>Discover Menu</h1>
         </section>
+        <p class="steak-section-top">World Class Steak</p>
         <section class="steak">
-        <p class="section-top">World Class Steak</p>
-            <p>At LuxCore Steakhouse, we strive to craft an exquisite haven where you and your cherished companions indulge in moments of serenity. With unwavering dedication, we curate an ambiance where each visit becomes a plate of memories, and our culinary artistry, an unparalleled testament to excellence. Welcome to a sanctuary of fine dining, where every dish is a masterpiece and every experience is etched in the elegance of shared stories.</p>
             <div class="steak-image">
                 <Image
                     src={steak}
@@ -18,11 +18,22 @@ export default function Menu() {
                     alt="Picture of the author"
                 />
             </div>
+            <p>Indulge in the extraordinary at LuxCore Steakhouse, where each succulent cut is a masterpiece of flavor, grilled to perfection and guaranteed to redefine your appreciation for the artistry of steak.</p>
         </section>
+
+        <p class="wine-section-top">Wine</p>
         <section class="wine">
-            <h2>Exceptional Wine Selection</h2>
-            <p>Elevate your dining experience at LuxCore Steakhouse with our exceptional wine selection, curated to complement the richness of our steaks. Discover a symphony of flavors as our expertly chosen wines enhance every bite, creating a harmonious and unforgettable palate journey.</p>
-        </section>
+        <p>Elevate your dining experience at LuxCore Steakhouse with our exceptional wine selection, curated to complement the richness of our steaks. Discover a symphony of flavors as our expertly chosen wines enhance every bite, creating a harmonious and unforgettable palate journey.</p>
+            <div class="wine-image">
+                <Image
+                    src={wine}
+                    width={500}
+                    height={500}
+                    alt="Picture of the author"
+                    style={{borderRadius: "10px"}}
+                />
+            </div>
+        </section>    
     </main>
     )
 } 
