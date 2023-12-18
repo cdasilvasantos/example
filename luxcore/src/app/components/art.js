@@ -8,7 +8,7 @@ export default function Art() {
                 <h1 className="art-heading">Dine in comfort, Revel in Exceptional Quality:
                     Where Culinary Craftsmanship Meets Timeless Elegance.</h1>
             </section>
-            <p>World Class Steak</p>
+            
             <section className="art-images-section">
                 <div className="art-image-wrapper">
                     <Image
