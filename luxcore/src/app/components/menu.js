@@ -1,6 +1,6 @@
 import Image from "next/image"
-import steak from "../public/images/steak.png"
-import wine from "../public/images/wine.png"
+import steak from "../../../public/images/steak.png"
+import wine from "../../../public/images/wine.png"
 
 export default function Menu() {
     return(
