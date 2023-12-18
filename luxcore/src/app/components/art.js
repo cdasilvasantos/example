@@ -5,8 +5,8 @@ export default function Art() {
     return (
         <main className="art">
             <section>
-                <h1 className="art-heading">Dine in comfort, Revel in Exceptional Quality:
-                    Where Culinary Craftsmanship Meets Timeless Elegance.</h1>
+                <h1 className="art-heading"> " Dine in comfort, Revel in Exceptional Quality:
+                    Where Culinary Craftsmanship Meets Timeless Elegance. " </h1>
             </section>
             
             <section className="art-images-section">
@@ -14,8 +14,8 @@ export default function Art() {
                     <Image
                         src={art}
                         layout="responsive"
-                        width={500}
-                        height={500}
+                        width={250}
+                        height={250}
                         alt="Picture of the art"
                     />
                 </div>
