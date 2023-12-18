@@ -7,7 +7,7 @@ export default function Hero() {
                 <section className="calltoaction">
                     <h1>Where culinary craftsmanship meets timeless elegance</h1>
                     <p>Join our members club for exclusive offers.</p>
-                    <a href="Footer.js" className="btn about1">
+                    <a href="footer.js" className="btn about1">
                         C&M Members Club
                     </a>
                 </section>
