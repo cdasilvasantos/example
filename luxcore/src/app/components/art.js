@@ -5,8 +5,8 @@ export default function Art() {
     return (
         <main className="art">
             <section>
-                <h1 className="art-heading">Dine in comfort, Revel in Exceptional Quality:
-                    Where Culinary Craftsmanship Meets Timeless Elegance.</h1>
+                <h1 className="art-heading">" Dine in comfort, Revel in Exceptional Quality:
+                    Where Culinary Craftsmanship Meets Timeless Elegance. "</h1>
             </section>
             
             <section className="art-images-section">
