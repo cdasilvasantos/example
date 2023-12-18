@@ -153,8 +153,10 @@ body {
 }
 
 .calltoaction p {
-  font-family: "Ephesis", serif;
-  margin-top: 15px;
+  font-family: "Ephesis", cursive;
+  font-size: 25px;
+  margin-bottom: 20px;
+  margin-top: 20px;
   color: white;
 }
 
