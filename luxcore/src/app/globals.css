@@ -519,7 +519,7 @@ footer p {
 
 .art-heading {
   font-size: 2em;
-  font-weight: bold;
+  font-family: 'Ruluko', sans-serif;
   margin: 0;
 }
 
@@ -534,3 +534,44 @@ footer p {
   overflow: hidden; /* Clip the images to their container */
 }
 
+/* Testimonial cards styling */
+.testimonial-section {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+  padding: 0 20px;
+}
+
+.testimonial-card {
+  background-color: #331B1B;
+  color: #fff; /* White text color */
+  padding: 20px;
+  border-radius: 8px; /* Slight rounding of corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  width: 30%; /* Each card takes up 30% of the container width */
+  margin: 0 10px; /* Spacing between cards */
+  box-sizing: border-box;
+}
+
+.testimonial-quote {
+  font-style: italic;
+  margin-bottom: 15px; 
+}
+
+.testimonial-author {
+  font-weight: bold;
+  text-align: right;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .testimonial-section {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .testimonial-card {
+      width: 80%; 
+      margin-bottom: 20px; 
+  }
+}

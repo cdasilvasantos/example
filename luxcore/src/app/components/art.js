@@ -8,7 +8,7 @@ export default function Art() {
                 <h1 className="art-heading">Dine in comfort, Revel in Exceptional Quality:
                     Where Culinary Craftsmanship Meets Timeless Elegance.</h1>
             </section>
-            
+            <p>World Class Steak</p>
             <section className="art-images-section">
                 <div className="art-image-wrapper">
                     <Image
@@ -19,7 +19,22 @@ export default function Art() {
                         alt="Picture of the art"
                     />
                 </div>
-                {/* Add more Image components as needed */}
+            </section>
+
+            {/* Testimonial cards */}
+            <section className="testimonial-section">
+                <div className="testimonial-card">
+                    <p className="testimonial-quote">"The ambiance and the quality of the steak at Luxcore are unparalleled. A top-notch dining experience that's a cut above the rest!"</p>
+                    <p className="testimonial-author">- Alex Regent, CEO of Regent Enterprises</p>
+                </div>
+                <div className="testimonial-card">
+                    <p className="testimonial-quote">"A truly exquisite culinary journey. The attention to detail and the flavors of Luxcore Steakhouse are unforgettable."</p>
+                    <p className="testimonial-author">- Dr. Samantha Pearce, Renowned Food Critic</p>
+                </div>
+                <div className="testimonial-card">
+                    <p className="testimonial-quote">"Every visit to Luxcore is a delight. The steak is perfectly seasoned and cooked to perfection, and the service is impeccable."</p>
+                    <p className="testimonial-author">- Michael Stonebridge, Michelin Star Chef</p>
+                </div>
             </section>
         </main>
     );
