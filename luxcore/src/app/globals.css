@@ -647,13 +647,13 @@ footer p {
   display: none; /* Initially hide all content */
   position: relative; /* Position relative for z-index */
   z-index: 2; /* Ensure content is above any background elements */
-  font-family: 'Ruluko', sans-serif;
+  font-family: 'Crimson Text', serif;
 }
 
 .content p {
   line-height: 1.6; /* Improve readability */
   margin-bottom: 20px; /* Spacing between paragraphs */
-  font-family: 'Ruluko', sans-serif;
+  font-family: 'Crimson Text', serif;
 }
 
 .btn.membership-btn {
