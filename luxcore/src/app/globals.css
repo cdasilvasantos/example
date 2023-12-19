@@ -519,7 +519,7 @@ footer p {
 
 .art-heading {
   font-size: 2em;
-  font-family: 'Ruluko', sans-serif;
+  font-family: 'Rye', cursive;
   margin: 0;
 }
 
@@ -579,6 +579,7 @@ footer p {
   .testimonial-section {
       flex-direction: column;
       align-items: center;
+      font-family: 'Ruluko', sans-serif;
   }
 
   .testimonial-card {
@@ -590,6 +591,7 @@ footer p {
 .testimonial-header {
   text-align: center;
   margin-bottom: 20px;
+  font-family: 'Ruluko', sans-serif;
   
 }
 
@@ -597,12 +599,14 @@ footer p {
   font-size: 2.25rem; /* Larger font size for the header */
   margin-bottom: 10px;
   font-weight: bold;
+  font-family: 'Rye', cursive;
 }
 
 .testimonial-header p {
   font-size: 1rem; /* Adjust the font size as necessary */
   margin-bottom: 20px;
    color: #331B1B; ;
+   font-family: 'Ruluko', sans-serif;
 }
 
 .join-club-btn {
@@ -621,4 +625,85 @@ footer p {
   background-color: #000;
 }
 
+/* About Page Styles */
+.about-container {
+  padding: 50px;
+  
+  color: #333; /* Dark text for contrast */
+  font-family: 'Ruluko', sans-serif;
+}
 
+
+.about-header {
+  text-align: center;
+  font-size: 3rem;
+  color: #333;
+  margin-bottom: 40px;
+  font-weight: bold;
+  font-family: 'Rye', cursive;
+}
+
+.tab-navigation {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  font-family: 'Ruluko', sans-serif;
+}
+
+.tab {
+  padding: 10px 20px;
+  border: none;
+  background-color: transparent;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.3s;
+  margin: 0 10px;
+  font-family: 'Ruluko', sans-serif;
+}
+
+.tab:hover, .tab.active {
+  color: #c59d5f; /* Highlight color */
+  border-bottom: 2px solid #c59d5f; /* Underline for active tab */
+}
+
+.tab-content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  color: #333;
+  transform: translateY(-10px); /* Slight lift effect */
+  max-width: 600px; /* Adjust width for more square-like appearance */
+  margin: auto; /* Center align the box */
+  font-family: 'Ruluko', sans-serif;
+}
+
+.content {
+  display: none; /* Initially hide all content */
+  position: relative; /* Position relative for z-index */
+  z-index: 2; /* Ensure content is above any background elements */
+  font-family: 'Ruluko', sans-serif;
+}
+
+.content p {
+  line-height: 1.6; /* Improve readability */
+  margin-bottom: 20px; /* Spacing between paragraphs */
+  font-family: 'Ruluko', sans-serif;
+}
+
+.btn.membership-btn {
+  display: block;
+  margin-top: 20px;
+  padding: 10px 25px;
+  background-color: #c59d5f;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  font-family: 'Ruluko', sans-serif;
+}
+
+.btn.membership-btn:hover {
+  background-color: #b3864f;
+}
