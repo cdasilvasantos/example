@@ -5,32 +5,26 @@ import { useState, useEffect } from 'react';
 import { getLocalStorage, setLocalStorage } from '../lib/storageHelper';
 
 export default function CookieBanner() {
-    const [showBanner, setShowBanner] = useState(false); // Default to false
+    const [cookieConsent, setCookieConsent] = useState(null); // Initially null
 
     useEffect(() => {
-        const storedConsent = getLocalStorage('cookie_consent');
-        console.log('Stored Consent:', storedConsent); // Check the stored value
-
-        if (storedConsent === null || storedConsent === 'undefined') {
-            // If no consent is stored, or if the stored value is 'undefined'
-            setShowBanner(true); // Update to show the banner
-        }
+        const storedCookieConsent = getLocalStorage("cookie_consent", null);
+        setCookieConsent(storedCookieConsent); // Update based on stored value
     }, []);
 
-    const handleAccept = () => {
-        setLocalStorage('cookie_consent', true);
-        setShowBanner(false);
-        // Trigger any action required for accepting cookies
-    };
-    
-    const handleDecline = () => {
-        setLocalStorage('cookie_consent', false);
-        setShowBanner(false);
-        // Trigger any action required for declining cookies
-    };
+    useEffect(() => {
+        if (cookieConsent !== null) {
+            const newValue = cookieConsent ? 'granted' : 'denied';
+            window.gtag("consent", 'update', { 'analytics_storage': newValue });
+            setLocalStorage("cookie_consent", cookieConsent);
+        }
+    }, [cookieConsent]);
 
+    // Do not render the banner if consent has been set
+    if (cookieConsent !== null) {
+        return null;
+    }
 
- 
 
 
     return (
@@ -46,8 +40,8 @@ export default function CookieBanner() {
             </div>
 
             <div className='flex gap-2'>
-                <button onClick={handleDecline} className='...'>Decline</button>
-                <button onClick={handleAccept} className='...'>Allow Cookies</button>
+            <button onClick={() => setCookieConsent(false)}>Decline</button>
+                <button onClick={() => setCookieConsent(true)}>Allow Cookies</button>
             </div>
         </div>
     );
