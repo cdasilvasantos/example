@@ -6,6 +6,7 @@ import Art from "./components/art";
 import Footer from "./components/footer";
 
 
+
 export default function Home() {
   return (
     <main>
@@ -17,5 +18,8 @@ export default function Home() {
       <Art />
       <Footer />
     </main>
+
+    
+
   )
 }

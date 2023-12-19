@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@bradgarropy/next-google-analytics": "^1.0.2",
     "client-only": "^0.0.1",
     "cookies-next": "^4.1.0",
     "js-cookie": "^3.0.5",
