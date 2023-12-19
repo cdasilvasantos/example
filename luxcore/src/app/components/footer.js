@@ -11,9 +11,7 @@ export default function Footer() {
 
         <h1>Luxcore</h1>
         <h3>123 Warren Street, Newark, NJ | 123-456-7890</h3>
-        <button className="btn about1">About Us</button>
-        <button className="btn menu">Menu</button>
-        <button className="btn contact">Join C&M</button>
+        
 
         <div id="mc_embed_signup">
           <form
