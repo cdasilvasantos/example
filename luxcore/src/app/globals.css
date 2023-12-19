@@ -22,103 +22,94 @@ body {
   background: #FFF6EC;
  }
  
- 
  header {
   color: black;
-  font-family: 'Outfit', sans-serif;
   background-color: #331B1B;
 }
 
 .container {
   width: 90%;
   margin: 0 auto;
+  max-width: 1200px;
 }
 
+/* Navbar */
 .navbar {
-  position:relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0;
-  transition: top 0.3s;
-  font-family: 'Ruluko', sans-serif;
+  padding: 15px 0;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-  font-size: 50px; 
-  color: #333 !important; 
-  font-family: 'Ephesis', cursive;  
-}
-
+/* Logo */
 .logo a {
   text-decoration: none;
-  color: white;
+  color: #fff;
+  font-size: 2.5em; /* Increased font size */
+  font-family: 'Ephesis', cursive; /* Ephesis font for cursive style */
 }
 
-.logo a:hover {
-  color: lightgray;
-}
-
-.navbar-toggle {
-  display: none;
-}
-
+/* Hamburger Menu */
 .navbar-toggler {
   display: none;
-  flex-direction: column;
   cursor: pointer;
 }
 
-.navbar-toggler span {
-  height: 3px;
+.hamburger .line {
   width: 25px;
-  margin: 4px;
-  transition: 0.4s;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px 0;
+  transition: all 0.3s ease;
 }
 
-.navbar-collapse {
-  display: flex;
-  font-family: 'Ruluko', sans-serif;
-  font-weight: 100px;
-}
-
+/* Navbar Links */
 .navbar-nav {
-  display: flex;
   list-style: none;
-  font-family: 'Ruluko', sans-serif;
-  font-weight: 100px;
-}
-
-.navbar-nav li {
-  margin: 0 15px;
-  font-family: 'Ruluko', sans-serif;
-  font-weight: 1000%;
-
+  display: flex;
+  gap: 20px;
+  align-items: center; /* Align items in line with the navbar */
 }
 
 .navbar-nav a {
   text-decoration: none;
-  color: white;
-  transition: color 0.3s;
-  font-family: 'Crimson Text', serif;
-  font-weight: 1000px;
-  text-transform: uppercase;
-  word-spacing: 10px;
+  color: #fff;
+  font-size: 1.2em; /* Slightly larger font size */
+  padding: 5px 10px;
+  transition: color 0.3s ease;
+  font-family: 'Ephesis', cursive; /* Ephesis font for cursive style */
 }
 
 .navbar-nav a:hover {
-  color: lightgray;
+  color: #7a7a7a;
 }
 
-.navbar-toggler-icon {
-  filter: invert(1);
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar-toggler {
+      display: block;
+  }
+
+  .navbar-collapse {
+      display: none;
+      width: 100%;
+      background-color: #f8f8f8;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      padding: 20px 0;
+  }
+
+  .navbar-collapse.active {
+      display: block;
+  }
+
+  .navbar-nav {
+      flex-direction: column;
+      align-items: center; /* Center items in column layout */
+  }
 }
+
  
  .banner {
   background-image: url('../../public/images/restaurant.png');
@@ -150,7 +141,7 @@ body {
 }
 
 .calltoaction p {
-  font-family: "Ephesis", cursive;
+  font-family: 'Ruluko', sans-serif;
   font-size: 25px;
   margin-bottom: 20px;
   margin-top: 20px;
@@ -806,6 +797,34 @@ footer p {
   .menu-modal {
       left: 5%;
       right: 5%;
+  }
+}
+
+
+
+/* Responsive design for the navbar */
+@media (max-width: 768px) {
+  .navbar-toggler {
+      display: block;
+  }
+
+  .navbar-collapse {
+      display: none; /* Hidden by default on small screens */
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: #331B1B;
+      padding: 10px 0;
+  }
+
+  .navbar-collapse.active {
+      display: block; /* Show when active */
+  }
+
+  .navbar-nav {
+      flex-direction: column;
+      align-items: center;
   }
 }
 
