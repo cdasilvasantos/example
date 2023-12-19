@@ -395,19 +395,19 @@ footer p {
 
 /* Button Styles */
 .btn {
-  background-color: #fff;
-  color: black;
-  border: none;
+  font-family: 'Crimson Text', serif;
+  font-size: 1.5rem;
+  margin: 10px;
   padding: 10px 20px;
-  border-radius: 20px;
   cursor: pointer;
-  font-size: 1rem;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
+  background-color: transparent;
+  border: 2px solid #fff;
+  transition: background-color 0.3s;
+  /* ...other styles... */
 }
 
 .btn:hover {
-  background-color: #000;
+  background-color: #331B1B;
 }
 
 /* Mailchimp Form Styles */
@@ -647,13 +647,13 @@ footer p {
   display: none; /* Initially hide all content */
   position: relative; /* Position relative for z-index */
   z-index: 2; /* Ensure content is above any background elements */
-  font-family: 'Ruluko', sans-serif;
+  font-family: 'Crimson Text', serif;
 }
 
 .content p {
   line-height: 1.6; /* Improve readability */
   margin-bottom: 20px; /* Spacing between paragraphs */
-  font-family: 'Ruluko', sans-serif;
+  font-family: 'Crimson Text', serif;
 }
 
 .btn.membership-btn {
@@ -769,12 +769,12 @@ footer p {
 /* Responsive Styles */
 @media (max-width: 768px) {
   .menu-modal {
-      left: 5%;
-      right: 5%;
+      width: 80%; /* Adjust the width on smaller screens */
+      /* Keep the modal centered */
+      left: 50%;
+      transform: translate(-50%, -50%);
   }
 }
-
-
 
 /* Responsive design for the navbar */
 @media (max-width: 768px) {
