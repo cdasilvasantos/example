@@ -1,39 +1,77 @@
-import Image from "next/image"
-import steak from "../../../public/images/steak.png"
-import wine from "../../../public/images/wine.png"
+import React from 'react';
+import Image from 'next/image';
+import steakImage from '../../../public/images/steak.png';
+import wineImage from '../../../public/images/wine.png';
 
 export default function Menu() {
-    return(
-        <main>
-        <section class="discover">
-            <h1>Discover Menu</h1>
-        </section>
-        <p class="steak-section-top">World Class Steak</p>
-        <section class="steak">
-            <div class="steak-image">
-                <Image
-                    src={steak}
-                    width={500}
-                    height={500}
-                    alt="Picture of the author"
-                />
-            </div>
-            <p>Indulge in the extraordinary at LuxCore Steakhouse, where each succulent cut is a masterpiece of flavor, grilled to perfection and guaranteed to redefine your appreciation for the artistry of steak.</p>
-        </section>
+    // JavaScript code to handle modal toggle
+    const scriptString = `
+        function toggleModal(modalId) {
+            var modal = document.getElementById(modalId);
+            modal.style.display = modal.style.display === 'block' ? 'none' : 'block';
+        }
 
-        <p class="wine-section-top">Wine</p>
-        <section class="wine">
-        <p>Elevate your dining experience at LuxCore Steakhouse with our exceptional wine selection, curated to complement the richness of our steaks. Discover a symphony of flavors as our expertly chosen wines enhance every bite, creating a harmonious and unforgettable palate journey.</p>
-            <div class="wine-image">
-                <Image
-                    src={wine}
-                    width={500}
-                    height={500}
-                    alt="Picture of the author"
-                    style={{borderRadius: "10px"}}
-                />
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('steakButton').onclick = function() { toggleModal('steakMenuModal'); };
+            document.getElementById('wineButton').onclick = function() { toggleModal('wineMenuModal'); };
+
+            document.querySelectorAll('.closeButton').forEach(button => {
+                button.onclick = function() {
+                    this.parentElement.style.display = 'none';
+                };
+            });
+        });
+    `;
+
+    return (
+        <div className="menu-container">
+            <h1 className="menu-header">Discover Our Menu</h1>
+
+            {/* Menu Categories */}
+            <div className="menu-categories">
+                <button id="steakButton">Steak</button>
+                <button id="wineButton">Wine</button>
             </div>
-        </section>    
-    </main>
-    )
-} 
+
+            {/* Steak Menu Modal */}
+            <div id="steakMenuModal" className="menu-modal" style={{ display: 'none' }}>
+                <h2>Steak Selection</h2>
+                <ul>
+                    <li>Ribeye - A tender and flavorful classic cut, $35</li>
+                    <li>Filet Mignon - Lean and succulent, our signature cut, $40</li>
+                    <li>Strip Steak - Perfectly marbled, $38</li>
+                    {/* Add more steak items */}
+                </ul>
+                <Image
+                    src="/images/steak.png"
+                    alt="Signature Filet Mignon"
+                    width={300}
+                    height={200}
+                    layout="responsive"
+                />
+                <button className="closeButton">Close</button>
+            </div>
+
+            <div id="wineMenuModal" className="menu-modal" style={{ display: 'none' }}>
+                <h2>Wine Selection</h2>
+                <ul>
+                    <li>Chardonnay - Fruity and rich, $15/glass</li>
+                    <li>Pinot Noir - Light and versatile, $16/glass</li>
+                    <li>Cabernet Sauvignon - Bold and spicy, featured selection, $18/glass</li>
+                    {/* Add more wine items */}
+                </ul>
+                <Image
+                    src="/images/wine.png"
+                    alt="Featured Cabernet Sauvignon"
+                    width={300}
+                    height={200}
+                    layout="responsive"
+                />
+                <button className="closeButton">Close</button>
+            </div>
+
+            {/* Client-side Script */}
+            <script dangerouslySetInnerHTML={{ __html: scriptString }} />
+        </div>
+    );
+}

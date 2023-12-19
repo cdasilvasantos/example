@@ -707,3 +707,105 @@ footer p {
 .btn.membership-btn:hover {
   background-color: #b3864f;
 }
+
+.menu-container {
+  text-align: center;
+  padding: 50px;
+  /* ...other styles... */
+}
+
+.menu-header {
+  font-family: 'Rye', cursive;
+  font-size: 3rem;
+  margin-bottom: 30px;
+  /* ...other styles... */
+}
+
+.menu-categories button {
+  font-family: 'Crimson Text', serif;
+  font-size: 1.5rem;
+  margin: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid #331B1B;
+  transition: background-color 0.3s;
+  /* ...other styles... */
+}
+
+.menu-categories button:hover {
+  background-color: #331B1B;
+  color: white;
+}
+
+.menu-modal {
+  position: fixed;
+  background-color: #FFF6EC;
+  border-radius: 20px;
+  padding: 20px;
+  z-index: 1000;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: auto; /* Auto width based on content */
+  max-width: 90%; /* Maximum width */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); /* Center the modal */
+  overflow-y: auto;
+}
+
+.menu-modal h2 {
+  color: #331B1B;
+  margin-bottom: 20px;
+  font-family: 'Rye', cursive;
+}
+
+.menu-modal ul {
+  text-align: left;
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+  font-family: 'Crimson Text', serif;
+}
+
+.menu-modal li {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.menu-modal img {
+  display: block; /* Makes the image a block-level element */
+  max-width: 300px; /* Adjust as needed */
+  height: auto;
+  margin: 20px auto; /* Top and bottom margin 20px, left and right auto */
+  border-radius: 10px;
+}
+
+
+.closeButton {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #331B1B;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Ruluko', sans-serif;
+}
+
+.closeButton:hover {
+  background-color: #9f896c;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .menu-modal {
+      left: 5%;
+      right: 5%;
+  }
+}
+
