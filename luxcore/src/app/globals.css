@@ -769,12 +769,12 @@ footer p {
 /* Responsive Styles */
 @media (max-width: 768px) {
   .menu-modal {
-      left: 5%;
-      right: 5%;
+      width: 80%; /* Adjust the width on smaller screens */
+      /* Keep the modal centered */
+      left: 50%;
+      transform: translate(-50%, -50%);
   }
 }
-
-
 
 /* Responsive design for the navbar */
 @media (max-width: 768px) {

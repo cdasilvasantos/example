@@ -1,10 +1,10 @@
 import Image from 'next/image';
-import awesome from "../../../public/images/awesome.png";
+import restaurant from "../../../public/images/restaurant.png";
 
 
 export default function About() {
     return (
-        <div className="about-container">
+        <div id="about" className="about-container">
             <h1 className="about-header"> Luxcore Steakhouse</h1>
 
             {/* Tab Navigation */}
@@ -22,7 +22,7 @@ export default function About() {
                     <p>Our dedicated chefs combine traditional techniques with modern culinary innovations, creating dishes that are as visually stunning as they are flavorful. From the moment you step inside, you're taken on a gastronomic journey that promises to delight every sense.</p>
                     <div className="about-image">
                         <Image
-                            src={awesome}
+                            src={restaurant}
                             alt="Luxcore Steakhouse"
                             width={500} // Adjust as needed
                             height={300} // Adjust as needed
