@@ -6,9 +6,9 @@ const websiteURL = 'http://localhost:3000';
 const expectedTitle = 'Luxcore';
 const expectedLogoText = 'LuxCore';
 const expectedHeroTitle = 'Where culinary craftsmanship meets timeless elegance';
-const expectedHeroSubText = 'Join our members club for exclusive offers.';
+const expectedHeroSubText = 'Join our members club for an all exclusive experience.';
 const expectedHeroLinkCount = 1;
-const expectedAboutTitle = 'At LuxCore Steakhouse , we  strive to craft an exquisite haven where you and your cherished companions indulge in moments of serenity. With unwavering dedication, we curate an ambiance where each visit becomes a plate of memories, and our culinary artistry, an unparalleled testament to excellence. Welcome to a sanctuary of fine dining, where every dish is a masterpiece and every experience is etched in the elegance of shared stories.';
+const expectedAboutTitle = ' Luxcore Steakhouse';
 const expectedMetaDescription = 'Luxury steakhouse at its core';
 const expectedNavs = ['Menu', 'About', 'Club'];
 
@@ -41,7 +41,7 @@ test('Check Links in Hero Section', async ({ page }) => {
 
 
 test('Check About Section', async ({ page }) => {
-  expect(await page.locator('.about-text').textContent()).toBe(expectedAboutTitle);
+  expect(await page.locator('.about-header').textContent()).toBe(expectedAboutTitle);
 });
 
 
