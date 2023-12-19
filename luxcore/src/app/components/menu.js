@@ -24,7 +24,8 @@ export default function Menu() {
     `;
 
     return (
-        <div className="menu-container">
+        
+        <div id ="menu" className="menu-container">
             <h1 className="menu-header">Discover Our Menu</h1>
 
             {/* Menu Categories */}
