@@ -15,9 +15,9 @@ export default function Navbar() {
                 </div>
                 <nav class="navbar-collapse">
                     <ul class="navbar-nav">
-                        <li><a href="">Menu</a></li>
-                        <li><a href="">About</a></li>
-                        <li><a href="">Club</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#contact-us">C&M Members Club</a></li>
                     </ul>
                 </nav>
             </div>

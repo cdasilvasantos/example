@@ -22,207 +22,169 @@ body {
   background: #FFF6EC;
  }
  
- 
  header {
   color: black;
-  font-family: 'Outfit', sans-serif;
   background-color: #331B1B;
 }
 
 .container {
   width: 90%;
   margin: 0 auto;
+  max-width: 1200px;
 }
 
+/* Navbar */
 .navbar {
-  position:relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0;
-  transition: top 0.3s;
-  font-family: 'Ruluko', sans-serif;
+  padding: 15px 0;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-  font-size: 50px; 
-  color: #333 !important; 
-  font-family: 'Ephesis', cursive;  
-}
-
+/* Logo */
 .logo a {
   text-decoration: none;
-  color: white;
+  color: #fff;
+  font-size: 2.5em; /* Increased font size */
+  font-family: 'Ephesis', cursive; /* Ephesis font for cursive style */
 }
 
-.logo a:hover {
-  color: lightgray;
-}
-
-.navbar-toggle {
-  display: none;
-}
-
+/* Hamburger Menu */
 .navbar-toggler {
   display: none;
-  flex-direction: column;
   cursor: pointer;
 }
 
-.navbar-toggler span {
-  height: 3px;
+.hamburger .line {
   width: 25px;
-  margin: 4px;
-  transition: 0.4s;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px 0;
+  transition: all 0.3s ease;
 }
 
-.navbar-collapse {
-  display: flex;
-  font-family: 'Ruluko', sans-serif;
-  font-weight: 100px;
-}
-
+/* Navbar Links */
 .navbar-nav {
-  display: flex;
   list-style: none;
-  font-family: 'Ruluko', sans-serif;
-  font-weight: 100px;
-}
-
-.navbar-nav li {
-  margin: 0 15px;
-  font-family: 'Ruluko', sans-serif;
-  font-weight: 1000%;
-
+  display: flex;
+  gap: 20px;
+  align-items: center; /* Align items in line with the navbar */
 }
 
 .navbar-nav a {
   text-decoration: none;
-  color: white;
-  transition: color 0.3s;
-  font-family: 'Crimson Text', serif;
-  font-weight: 1000px;
-  text-transform: uppercase;
-  word-spacing: 10px;
+  color: #fff;
+  font-size: 1.2em; /* Slightly larger font size */
+  padding: 5px 10px;
+  transition: color 0.3s ease;
+  font-family: 'Ephesis', cursive; /* Ephesis font for cursive style */
 }
 
 .navbar-nav a:hover {
-  color: lightgray;
+  color: #7a7a7a;
 }
 
-.navbar-toggler-icon {
-  filter: invert(1);
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar-toggler {
+      display: block;
+  }
+
+  .navbar-collapse {
+      display: none;
+      width: 100%;
+      background-color: #f8f8f8;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      padding: 20px 0;
+  }
+
+  .navbar-collapse.active {
+      display: block;
+  }
+
+  .navbar-nav {
+      flex-direction: column;
+      align-items: center; /* Center items in column layout */
+  }
 }
+
  
- .banner {
-  background-image: url('../../public/images/restaurant.png');
-  border-radius: 0px 0px 15px 15px;
-  background-size: cover;
-  background-position: center;
-  height: 850px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: #180d0d;
-  opacity: 90%;
- }
- 
- .calltoaction {
-  height: 200px;
-  width: 1203px;
-  border-radius: 20px;
-  background: rgba(98, 54, 54, 0.77);
- }
+
+  .banner {
+    position: relative; /* Needed for Image component with layout='fill' */
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    align-items: center; /* Vertically center the content */
+    justify-content: center; /* Horizontally center the content */
+}
+.banner-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1; /* Places the image behind the call-to-action */
+}
+
+/* Call to Action Styling */
+.calltoaction {
+  background-color: rgba(79, 49, 49, 0.6); /* Semi-transparent black background */
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1; /* Ensures it's above the background image */
+}
 
 .calltoaction h1 {
-  margin-bottom: 10px;
-  font-family: "Ephesis", cursive;
-  font-size: 30px;
-  color: white;
+  font-family: 'Ephesis', cursive; /* Luxurious cursive font */
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #fff;
 }
 
 .calltoaction p {
-  font-family: "Ephesis", cursive;
-  font-size: 25px;
-  margin-bottom: 20px;
-  margin-top: 20px;
-  color: white;
+  font-size: 1.2em;
+  margin-bottom: 30px;
 }
 
-.button-right {
-  width: 100%;
-  height: 100%;
-  flex-shrink: 0;
-  border-radius: 50px;
-  background: linear-gradient(180deg, rgba(30, 81, 128, 0.00) 0%, #8D5F86 150%);
-  text-decoration: none;
-  display: center;
-  align-items: center;
-  justify-content: center;
-  color: #FFFCFC;
-  font-family:Georgia, 'Times New Roman', Times, serif;
-  font-size: 110%;
-  font-style: normal;
-  font-weight: 700;
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .banner {
+      height: 50vh;
+  }
+
+  .calltoaction {
+      padding: 20px;
+      max-width: 90%;
+  }
+
+  .calltoaction h1 {
+      font-size: 2em;
+  }
+
+  .calltoaction p {
+      font-size: 1em;
+  }
 }
 
-.project-cards {
-  display: flex;
-  align-items: center;
-  width: 1200px;
-  margin-top: 121px;
-  justify-content:space-evenly;
-}
+@media (max-width: 480px) {
+  .banner {
+      height: 40vh;
+  }
 
-.project1 {
-  text-align: center;
-  border-radius: 20px;
-  background: #331B1B;
-  width: 1000px;
-  height: 570px;
-}
+  .calltoaction h1 {
+      font-size: 1.8em;
+  }
 
-.project1 .section-top1 {
-  color: white;
-  text-transform: uppercase;
-  margin-top: 40px;
-}
-
-.btn {
-  border: 2px solid black;
-  border-radius: 20px;
-  background-color: #331B1B;
-  color: black;
-  padding: 14px 28px;
-  font-size: 16px;
-  cursor: pointer;
-  margin-top: 30px;
-  text-transform: uppercase;
-  font-family: "Ruluku", sans-serif;
-}
-
-.about {
-  border-color: white;
-  color: white;
-  margin-right: 100px;
-}
-
-.about:hover {
-  background-color: gray;
-  color: white;
-}
-
-.members {
-  border-color: white;
-  color: white;
+  .btn.about1 {
+      padding: 8px 16px;
+      font-size: 0.9em;
+  }
 }
 
 .members:hover {
@@ -434,10 +396,13 @@ footer p {
 /* Button Styles */
 .btn {
   background-color: #fff;
-  color: #000;
-  padding: 10px 20px;
+  color: black;
   border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
   cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
   transition: background-color 0.3s ease;
 }
 
@@ -519,7 +484,7 @@ footer p {
 
 .art-heading {
   font-size: 2em;
-  font-family: 'Ruluko', sans-serif;
+  font-family: 'Rye', cursive;
   margin: 0;
 }
 
@@ -579,6 +544,7 @@ footer p {
   .testimonial-section {
       flex-direction: column;
       align-items: center;
+      font-family: 'Ruluko', sans-serif;
   }
 
   .testimonial-card {
@@ -590,6 +556,7 @@ footer p {
 .testimonial-header {
   text-align: center;
   margin-bottom: 20px;
+  font-family: 'Ruluko', sans-serif;
   
 }
 
@@ -597,17 +564,19 @@ footer p {
   font-size: 2.25rem; /* Larger font size for the header */
   margin-bottom: 10px;
   font-weight: bold;
+  font-family: 'Rye', cursive;
 }
 
 .testimonial-header p {
   font-size: 1rem; /* Adjust the font size as necessary */
   margin-bottom: 20px;
    color: #331B1B; ;
+   font-family: 'Ruluko', sans-serif;
 }
 
 .join-club-btn {
-  background-color: #331B1B;
-  color: white;
+  background-color: #fff;
+  color: black;
   border: none;
   padding: 10px 20px;
   border-radius: 20px;
@@ -618,7 +587,218 @@ footer p {
 }
 
 .join-club-btn:hover {
-  background-color: #331B1B;
+  background-color: #513f3f; ;
 }
 
+/* About Page Styles */
+.about-container {
+  padding: 50px;
+  
+  color: #333; /* Dark text for contrast */
+  font-family: 'Ruluko', sans-serif;
+}
+
+
+.about-header {
+  text-align: center;
+  font-size: 3rem;
+  color: #333;
+  margin-bottom: 40px;
+  font-weight: bold;
+  font-family: 'Rye', cursive;
+}
+
+.tab-navigation {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  font-family: 'Ruluko', sans-serif;
+}
+
+.tab {
+  padding: 10px 20px;
+  border: none;
+  background-color: transparent;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.3s;
+  margin: 0 10px;
+  font-family: 'Ruluko', sans-serif;
+}
+
+.tab:hover, .tab.active {
+  color: #c59d5f; /* Highlight color */
+  border-bottom: 2px solid #c59d5f; /* Underline for active tab */
+}
+
+.tab-content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  color: #333;
+  transform: translateY(-10px); /* Slight lift effect */
+  max-width: 600px; /* Adjust width for more square-like appearance */
+  margin: auto; /* Center align the box */
+  font-family: 'Ruluko', sans-serif;
+}
+
+.content {
+  display: none; /* Initially hide all content */
+  position: relative; /* Position relative for z-index */
+  z-index: 2; /* Ensure content is above any background elements */
+  font-family: 'Ruluko', sans-serif;
+}
+
+.content p {
+  line-height: 1.6; /* Improve readability */
+  margin-bottom: 20px; /* Spacing between paragraphs */
+  font-family: 'Ruluko', sans-serif;
+}
+
+.btn.membership-btn {
+  display: block;
+  margin-top: 20px;
+  padding: 10px 25px;
+  background-color: #331B1B;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  font-family: 'Ruluko', sans-serif;
+}
+
+.btn.membership-btn:hover {
+  background-color: #b3864f;
+}
+
+.menu-container {
+  text-align: center;
+  padding: 50px;
+  /* ...other styles... */
+}
+
+.menu-header {
+  font-family: 'Rye', cursive;
+  font-size: 3rem;
+  margin-bottom: 30px;
+  /* ...other styles... */
+}
+
+.menu-categories button {
+  font-family: 'Crimson Text', serif;
+  font-size: 1.5rem;
+  margin: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid #331B1B;
+  transition: background-color 0.3s;
+  /* ...other styles... */
+}
+
+.menu-categories button:hover {
+  background-color: #331B1B;
+  color: white;
+}
+
+.menu-modal {
+  position: fixed;
+  background-color: #FFF6EC;
+  border-radius: 20px;
+  padding: 20px;
+  z-index: 1000;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: auto; /* Auto width based on content */
+  max-width: 90%; /* Maximum width */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); /* Center the modal */
+  overflow-y: auto;
+}
+
+.menu-modal h2 {
+  color: #331B1B;
+  margin-bottom: 20px;
+  font-family: 'Rye', cursive;
+}
+
+.menu-modal ul {
+  text-align: left;
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+  font-family: 'Crimson Text', serif;
+}
+
+.menu-modal li {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.menu-modal img {
+  display: block; /* Makes the image a block-level element */
+  max-width: 300px; /* Adjust as needed */
+  height: auto;
+  margin: 20px auto; /* Top and bottom margin 20px, left and right auto */
+  border-radius: 10px;
+}
+
+
+.closeButton {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #331B1B;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Ruluko', sans-serif;
+}
+
+.closeButton:hover {
+  background-color: #9f896c;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .menu-modal {
+      left: 5%;
+      right: 5%;
+  }
+}
+
+
+
+/* Responsive design for the navbar */
+@media (max-width: 768px) {
+  .navbar-toggler {
+      display: block;
+  }
+
+  .navbar-collapse {
+      display: none; /* Hidden by default on small screens */
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: #331B1B;
+      padding: 10px 0;
+  }
+
+  .navbar-collapse.active {
+      display: block; /* Show when active */
+  }
+
+  .navbar-nav {
+      flex-direction: column;
+      align-items: center;
+  }
+}
 

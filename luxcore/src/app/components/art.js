@@ -5,10 +5,10 @@ export default function Art() {
     return (
         <main className="art">
             <section>
-                <h1 className="art-heading">Dine in comfort, Revel in Exceptional Quality:
-                    Where Culinary Craftsmanship Meets Timeless Elegance.</h1>
+                <h1 className="art-heading">" Dine in comfort, Revel in Exceptional Quality:
+                    Where Culinary Craftsmanship Meets Timeless Elegance. "</h1>
             </section>
-            <p>World Class Steak</p>
+            
             <section className="art-images-section">
                 <div className="art-image-wrapper">
                     <Image
@@ -23,7 +23,7 @@ export default function Art() {
             <section className="testimonial-header">
                 <h2>Discover Why Our Guests Love Luxcore</h2>
                 <p>Join the C&M Members Club and be part of an exclusive experience that's revered by culinary connoisseurs and high-profile personalities alike.</p>
-                <button className="btn join-club-btn">Join the Members Club</button>
+                
             </section>
 
             {/* Testimonial cards */}
