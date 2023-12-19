@@ -3,6 +3,7 @@
 
 import Script from 'next/script';
 
+
 export default function GoogleAnalytics({ GA_MEASUREMENT_ID }) {
     return (
         <>
