@@ -1,8 +1,38 @@
 // components/CookieBanner.js
-
+'use client';
 import Link from 'next/link';
+import { useState, useEffect } from 'react';
+import { getLocalStorage, setLocalStorage } from '../lib/storageHelper';
 
 export default function CookieBanner() {
+    const [showBanner, setShowBanner] = useState(false); // Default to false
+
+    useEffect(() => {
+        const storedConsent = getLocalStorage('cookie_consent');
+        console.log('Stored Consent:', storedConsent); // Check the stored value
+
+        if (storedConsent === null || storedConsent === 'undefined') {
+            // If no consent is stored, or if the stored value is 'undefined'
+            setShowBanner(true); // Update to show the banner
+        }
+    }, []);
+
+    const handleAccept = () => {
+        setLocalStorage('cookie_consent', true);
+        setShowBanner(false);
+        // Trigger any action required for accepting cookies
+    };
+    
+    const handleDecline = () => {
+        setLocalStorage('cookie_consent', false);
+        setShowBanner(false);
+        // Trigger any action required for declining cookies
+    };
+
+
+ 
+
+
     return (
         <div className={`my-10 mx-auto max-w-max md:max-w-screen-sm
                         fixed bottom-0 left-0 right-0 
@@ -16,8 +46,8 @@ export default function CookieBanner() {
             </div>
 
             <div className='flex gap-2'>
-                <button className='px-5 py-2 text-gray-300 rounded-md border-gray-900'>Decline</button>
-                <button className='bg-gray-900 px-5 py-2 text-white rounded-lg'>Allow Cookies</button>
+                <button onClick={handleDecline} className='...'>Decline</button>
+                <button onClick={handleAccept} className='...'>Allow Cookies</button>
             </div>
         </div>
     );
