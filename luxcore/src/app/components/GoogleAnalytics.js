@@ -23,7 +23,7 @@ export default function GoogleAnalytics({ GA_MEASUREMENT_ID }) {
         <>
             <Script 
                 strategy="afterInteractive" 
-                src={`https://www.googletagmanager.com/gtag/js?id=$G-ZC5THDW0CG`} 
+                src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
             />
             <Script 
                 id='google-analytics' 
@@ -38,7 +38,7 @@ export default function GoogleAnalytics({ GA_MEASUREMENT_ID }) {
                         'analytics_storage': 'denied'
                     });
                     
-                    gtag('config', '$G-ZC5THDW0CG', {
+                    gtag('config', '${GA_MEASUREMENT_ID}', {
                         page_path: window.location.pathname,
                     });
                     `,
